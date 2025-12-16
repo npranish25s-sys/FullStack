@@ -1,0 +1,221 @@
+/* ============================
+   RESET
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  padding: 20px;
+  color: #222;
+}
+
+/* ============================
+   CONTAINER
+============================ */
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ============================
+   HEADER
+============================ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+#search-input {
+  padding: 10px 14px;
+  width: 250px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background: #fff;
+}
+
+#search-input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+#refresh-btn {
+  padding: 10px 14px;
+  background: #ddd;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ============================
+   LAYOUT
+============================ */
+main {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 20px;
+}
+
+/* ============================
+   PANELS
+============================ */
+.form-section,
+.list-section {
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+}
+
+.form-section h3,
+.list-section h2 {
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* ============================
+   FORM FIELDS
+============================ */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.row input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background: white;
+  color: #000;
+  font-size: 15px;
+}
+
+.row input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* ============================
+   FORM BUTTONS
+============================ */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.actions button[type="submit"] {
+  background: #4a90e2;
+  color: #fff;
+}
+
+.actions button[type="submit"]:hover {
+  background: #357bd8;
+}
+
+#clear-form {
+  background: #e5e5e5;
+  color: #333;
+}
+
+/* ============================
+   MOVIE LIST
+============================ */
+.movie-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-item:last-child {
+  border-bottom: none;
+}
+
+.movie-item p {
+  font-size: 15px;
+}
+
+.movie-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.movie-actions button {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.movie-actions .edit {
+  background: #34d399;
+  color: #034733;
+}
+
+.movie-actions .delete {
+  background: #ef4444;
+  color: white;
+}
+
+/* ============================
+   MODAL
+============================ */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
